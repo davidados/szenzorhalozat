@@ -25,7 +25,10 @@
       },
       "ertekek/1.0.0": {
         "runtime": {
-          "ertekek.dll": {}
+          "ertekek.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

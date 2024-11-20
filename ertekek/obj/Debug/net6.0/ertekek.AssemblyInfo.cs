@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ertekek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03d8423c9cf71f8ba1b87a270fa62b1bef2c702f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29463f7e0b3d92c1a77b6ee2487b603014943b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ertekek")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ertekek")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
