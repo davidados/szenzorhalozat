@@ -14,25 +14,28 @@ namespace beolvasas
         {
             Felvegezve += OnFelvegezve;                                        //Feliratkozás az OnFelvegezve-re
 
-            Ertekek randomValues = Szenzoros.Randomertekes();
-
-            Console.WriteLine($"Hőmérséklet: {randomValues.Homerseklet}°C");
-            Console.WriteLine($"Páratartalom: {randomValues.Paratartalom}%");
-            Console.WriteLine($"Túlfolyó vízszint: {randomValues.TulfolyoVizszint} cm");
-            Console.WriteLine($"Állapotjelző: {randomValues.Allapotjell}");
-            Console.WriteLine($"Folyó vízszint: {randomValues.Folyovizszint} cm");
-
-
-            var szenzor = new Ertekek
+            List<Ertekek> szenzorAdatok = new List<Ertekek>();
+            for (int i = 0; i < 50; i++)
             {
-                Homerseklet = randomValues.Homerseklet,
-                Paratartalom = randomValues.Paratartalom,
-                TulfolyoVizszint = randomValues.TulfolyoVizszint,
-                Allapotjell = randomValues.Allapotjell,
-                Folyovizszint = randomValues.Folyovizszint
-            };
-            string json = JsonConvert.SerializeObject(szenzor, Newtonsoft.Json.Formatting.Indented);
-            Console.WriteLine(json);
+                Ertekek randomValues = Szenzoros.Randomertekes();
+                szenzorAdatok.Add(randomValues);
+            
+                Console.WriteLine($"Szenzor {i + 1}:");
+                Console.WriteLine($"Hőmérséklet: {randomValues.Homerseklet}°C");
+                Console.WriteLine($"Páratartalom: {randomValues.Paratartalom}%");
+                Console.WriteLine($"Túlfolyó vízszint: {randomValues.TulfolyoVizszint} cm");
+                Console.WriteLine($"Állapotjelző: {randomValues.Allapotjell}");
+                Console.WriteLine($"Folyó vízszint: {randomValues.Folyovizszint} cm");
+                Console.WriteLine(new string('-', 20));
+            }
+
+
+
+    
+                  // JSON fájl generálása
+           string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
+           Console.WriteLine("JSON adat:");
+           Console.WriteLine(json);
 
             Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
 
@@ -42,19 +45,26 @@ namespace beolvasas
              writer.WriteStartDocument(true);
              writer.WriteStartElement("SzenzorAdatok");
             
-             writer.WriteStartElement("Szenzor");
-             writer.WriteElementString("Homerseklet", randomValues.Homerseklet.ToString());
-             writer.WriteElementString("Paratartalom", randomValues.Paratartalom.ToString());
-             writer.WriteElementString("TulfolyoVizszint", randomValues.TulfolyoVizszint.ToString());
-             writer.WriteElementString("Allapotjelzo", randomValues.Allapotjell.ToString());
-             writer.WriteElementString("Folyovizszint", randomValues.Folyovizszint.ToString());
-             writer.WriteEndElement();
-            
-             writer.WriteEndElement(); // SzenzorAdatok lezárása
-             writer.Flush();
-             writer.Close();
-            
-             Console.WriteLine("Adatok XML fájlba írása befejeződött.");
+             
+            for (int i = 0; i < szenzorAdatok.Count; i++)
+            {
+                Ertekek adat = szenzorAdatok[i];
+                writer.WriteStartElement("Szenzor");
+
+                writer.WriteElementString("Homerseklet", adat.Homerseklet.ToString());
+                writer.WriteElementString("Paratartalom", adat.Paratartalom.ToString());
+                writer.WriteElementString("TulfolyoVizszint", adat.TulfolyoVizszint.ToString());
+                writer.WriteElementString("Allapotjelzo", adat.Allapotjell.ToString());
+                writer.WriteElementString("Folyovizszint", adat.Folyovizszint.ToString());
+
+                writer.WriteEndElement(); 
+            }
+
+            writer.WriteEndElement(); 
+            writer.Flush();
+            writer.Close();
+
+            Console.WriteLine("Adatok generálása, JSON és XML fájlba írása befejeződött.");
 
             
 
