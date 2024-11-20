@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\bin\Debug\net6.0\ertekek.deps.json
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\bin\Debug\net6.0\ertekek.dll
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\bin\Debug\net6.0\ertekek.pdb
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.AssemblyInfo.cs
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.dll
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\refint\ertekek.dll
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.pdb
+C:\Users\User\source\repos\teszt\szenzorhalozat\ertekek\obj\Debug\net6.0\ref\ertekek.dll
