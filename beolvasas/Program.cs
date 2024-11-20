@@ -31,6 +31,25 @@ namespace beolvasas
             string json = JsonConvert.SerializeObject(szenzor, Formatting.Indented);
             Console.WriteLine(json);
 
+             XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
+             writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
+             writer.WriteStartDocument(true);
+             writer.WriteStartElement("SzenzorAdatok");
+            
+             writer.WriteStartElement("Szenzor");
+             writer.WriteElementString("Homerseklet", randomValues.Homerseklet.ToString());
+             writer.WriteElementString("Paratartalom", randomValues.Paratartalom.ToString());
+             writer.WriteElementString("TulfolyoVizszint", randomValues.TulfolyoVizszint.ToString());
+             writer.WriteElementString("Allapotjelzo", randomValues.Allapotjell.ToString());
+             writer.WriteElementString("Folyovizszint", randomValues.Folyovizszint.ToString());
+             writer.WriteEndElement();
+            
+             writer.WriteEndElement(); // SzenzorAdatok lezárása
+             writer.Flush();
+             writer.Close();
+            
+             Console.WriteLine("Adatok XML fájlba írása befejeződött.");
+
             Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
 
             Console.ReadKey();
