@@ -1,0 +1,352 @@
+[
+  {
+    "Homerseklet": 22,
+    "Paratartalom": 80,
+    "TulfolyoVizszint": 55,
+    "Allapotjell": 4,
+    "Folyovizszint": 7
+  },
+  {
+    "Homerseklet": 6,
+    "Paratartalom": 45,
+    "TulfolyoVizszint": 3,
+    "Allapotjell": 2,
+    "Folyovizszint": 62
+  },
+  {
+    "Homerseklet": -4,
+    "Paratartalom": 43,
+    "TulfolyoVizszint": 4,
+    "Allapotjell": 4,
+    "Folyovizszint": 31
+  },
+  {
+    "Homerseklet": 37,
+    "Paratartalom": 14,
+    "TulfolyoVizszint": 43,
+    "Allapotjell": 3,
+    "Folyovizszint": 69
+  },
+  {
+    "Homerseklet": 8,
+    "Paratartalom": 35,
+    "TulfolyoVizszint": 52,
+    "Allapotjell": 0,
+    "Folyovizszint": 81
+  },
+  {
+    "Homerseklet": -3,
+    "Paratartalom": 25,
+    "TulfolyoVizszint": 42,
+    "Allapotjell": 2,
+    "Folyovizszint": 69
+  },
+  {
+    "Homerseklet": 7,
+    "Paratartalom": 23,
+    "TulfolyoVizszint": 19,
+    "Allapotjell": 2,
+    "Folyovizszint": 74
+  },
+  {
+    "Homerseklet": 9,
+    "Paratartalom": 18,
+    "TulfolyoVizszint": 136,
+    "Allapotjell": 0,
+    "Folyovizszint": 66
+  },
+  {
+    "Homerseklet": 13,
+    "Paratartalom": 63,
+    "TulfolyoVizszint": 107,
+    "Allapotjell": 2,
+    "Folyovizszint": 2
+  },
+  {
+    "Homerseklet": 39,
+    "Paratartalom": 31,
+    "TulfolyoVizszint": 129,
+    "Allapotjell": 3,
+    "Folyovizszint": 95
+  },
+  {
+    "Homerseklet": 35,
+    "Paratartalom": 86,
+    "TulfolyoVizszint": 3,
+    "Allapotjell": 0,
+    "Folyovizszint": 11
+  },
+  {
+    "Homerseklet": 36,
+    "Paratartalom": 21,
+    "TulfolyoVizszint": 76,
+    "Allapotjell": 2,
+    "Folyovizszint": 85
+  },
+  {
+    "Homerseklet": -4,
+    "Paratartalom": 6,
+    "TulfolyoVizszint": 34,
+    "Allapotjell": 3,
+    "Folyovizszint": 64
+  },
+  {
+    "Homerseklet": 23,
+    "Paratartalom": 21,
+    "TulfolyoVizszint": 57,
+    "Allapotjell": 3,
+    "Folyovizszint": 54
+  },
+  {
+    "Homerseklet": -2,
+    "Paratartalom": 65,
+    "TulfolyoVizszint": 84,
+    "Allapotjell": 1,
+    "Folyovizszint": 75
+  },
+  {
+    "Homerseklet": 2,
+    "Paratartalom": 47,
+    "TulfolyoVizszint": 147,
+    "Allapotjell": 1,
+    "Folyovizszint": 45
+  },
+  {
+    "Homerseklet": 35,
+    "Paratartalom": 37,
+    "TulfolyoVizszint": 60,
+    "Allapotjell": 1,
+    "Folyovizszint": 25
+  },
+  {
+    "Homerseklet": 35,
+    "Paratartalom": 16,
+    "TulfolyoVizszint": 141,
+    "Allapotjell": 4,
+    "Folyovizszint": 88
+  },
+  {
+    "Homerseklet": 11,
+    "Paratartalom": 39,
+    "TulfolyoVizszint": 94,
+    "Allapotjell": 2,
+    "Folyovizszint": 21
+  },
+  {
+    "Homerseklet": 16,
+    "Paratartalom": 78,
+    "TulfolyoVizszint": 140,
+    "Allapotjell": 4,
+    "Folyovizszint": 81
+  },
+  {
+    "Homerseklet": 7,
+    "Paratartalom": 57,
+    "TulfolyoVizszint": 112,
+    "Allapotjell": 4,
+    "Folyovizszint": 35
+  },
+  {
+    "Homerseklet": 30,
+    "Paratartalom": 84,
+    "TulfolyoVizszint": 44,
+    "Allapotjell": 3,
+    "Folyovizszint": 5
+  },
+  {
+    "Homerseklet": 24,
+    "Paratartalom": 92,
+    "TulfolyoVizszint": 107,
+    "Allapotjell": 1,
+    "Folyovizszint": 29
+  },
+  {
+    "Homerseklet": 11,
+    "Paratartalom": 72,
+    "TulfolyoVizszint": 17,
+    "Allapotjell": 4,
+    "Folyovizszint": 60
+  },
+  {
+    "Homerseklet": 11,
+    "Paratartalom": 66,
+    "TulfolyoVizszint": 65,
+    "Allapotjell": 1,
+    "Folyovizszint": 35
+  },
+  {
+    "Homerseklet": 20,
+    "Paratartalom": 62,
+    "TulfolyoVizszint": 71,
+    "Allapotjell": 1,
+    "Folyovizszint": 70
+  },
+  {
+    "Homerseklet": 22,
+    "Paratartalom": 24,
+    "TulfolyoVizszint": 129,
+    "Allapotjell": 4,
+    "Folyovizszint": 34
+  },
+  {
+    "Homerseklet": 0,
+    "Paratartalom": 32,
+    "TulfolyoVizszint": 38,
+    "Allapotjell": 4,
+    "Folyovizszint": 81
+  },
+  {
+    "Homerseklet": 5,
+    "Paratartalom": 17,
+    "TulfolyoVizszint": 51,
+    "Allapotjell": 3,
+    "Folyovizszint": 8
+  },
+  {
+    "Homerseklet": 24,
+    "Paratartalom": 25,
+    "TulfolyoVizszint": 90,
+    "Allapotjell": 4,
+    "Folyovizszint": 35
+  },
+  {
+    "Homerseklet": 39,
+    "Paratartalom": 47,
+    "TulfolyoVizszint": 63,
+    "Allapotjell": 0,
+    "Folyovizszint": 77
+  },
+  {
+    "Homerseklet": 13,
+    "Paratartalom": 88,
+    "TulfolyoVizszint": 78,
+    "Allapotjell": 0,
+    "Folyovizszint": 48
+  },
+  {
+    "Homerseklet": 23,
+    "Paratartalom": 30,
+    "TulfolyoVizszint": 119,
+    "Allapotjell": 1,
+    "Folyovizszint": 25
+  },
+  {
+    "Homerseklet": 15,
+    "Paratartalom": 79,
+    "TulfolyoVizszint": 86,
+    "Allapotjell": 4,
+    "Folyovizszint": 46
+  },
+  {
+    "Homerseklet": 24,
+    "Paratartalom": 59,
+    "TulfolyoVizszint": 108,
+    "Allapotjell": 4,
+    "Folyovizszint": 15
+  },
+  {
+    "Homerseklet": 16,
+    "Paratartalom": 69,
+    "TulfolyoVizszint": 61,
+    "Allapotjell": 4,
+    "Folyovizszint": 93
+  },
+  {
+    "Homerseklet": -3,
+    "Paratartalom": 96,
+    "TulfolyoVizszint": 83,
+    "Allapotjell": 1,
+    "Folyovizszint": 30
+  },
+  {
+    "Homerseklet": 4,
+    "Paratartalom": 55,
+    "TulfolyoVizszint": 34,
+    "Allapotjell": 3,
+    "Folyovizszint": 44
+  },
+  {
+    "Homerseklet": 1,
+    "Paratartalom": 88,
+    "TulfolyoVizszint": 134,
+    "Allapotjell": 2,
+    "Folyovizszint": 90
+  },
+  {
+    "Homerseklet": 29,
+    "Paratartalom": 0,
+    "TulfolyoVizszint": 137,
+    "Allapotjell": 1,
+    "Folyovizszint": 31
+  },
+  {
+    "Homerseklet": 28,
+    "Paratartalom": 50,
+    "TulfolyoVizszint": 59,
+    "Allapotjell": 1,
+    "Folyovizszint": 96
+  },
+  {
+    "Homerseklet": 4,
+    "Paratartalom": 92,
+    "TulfolyoVizszint": 118,
+    "Allapotjell": 0,
+    "Folyovizszint": 66
+  },
+  {
+    "Homerseklet": 39,
+    "Paratartalom": 94,
+    "TulfolyoVizszint": 39,
+    "Allapotjell": 2,
+    "Folyovizszint": 68
+  },
+  {
+    "Homerseklet": 32,
+    "Paratartalom": 83,
+    "TulfolyoVizszint": 79,
+    "Allapotjell": 2,
+    "Folyovizszint": 61
+  },
+  {
+    "Homerseklet": 33,
+    "Paratartalom": 87,
+    "TulfolyoVizszint": 11,
+    "Allapotjell": 1,
+    "Folyovizszint": 97
+  },
+  {
+    "Homerseklet": 29,
+    "Paratartalom": 21,
+    "TulfolyoVizszint": 107,
+    "Allapotjell": 3,
+    "Folyovizszint": 62
+  },
+  {
+    "Homerseklet": 18,
+    "Paratartalom": 63,
+    "TulfolyoVizszint": 41,
+    "Allapotjell": 3,
+    "Folyovizszint": 57
+  },
+  {
+    "Homerseklet": 29,
+    "Paratartalom": 35,
+    "TulfolyoVizszint": 2,
+    "Allapotjell": 2,
+    "Folyovizszint": 28
+  },
+  {
+    "Homerseklet": -4,
+    "Paratartalom": 63,
+    "TulfolyoVizszint": 119,
+    "Allapotjell": 4,
+    "Folyovizszint": 32
+  },
+  {
+    "Homerseklet": 32,
+    "Paratartalom": 63,
+    "TulfolyoVizszint": 6,
+    "Allapotjell": 3,
+    "Folyovizszint": 19
+  }
+]

@@ -33,17 +33,21 @@ namespace beolvasas
 
     
                   // JSON fájl generálása
-           string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
-           Console.WriteLine("JSON adat:");
-           Console.WriteLine(json);
+                   string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
+                   Console.WriteLine("JSON adat:");
+                   Console.WriteLine(json);
+                    StreamWriter ki = new StreamWriter("adatok_json.txt"); //JSON fájl létrehozása
+                    ki.WriteLine(json); //kiírjuk a fájlba
+                    ki.Flush(); //puffer ürítése
+                    ki.Close();
+                    Felvegezve.Invoke("\nElkészült az adatok_json.txt fájl.");
+          
 
-            Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
 
-
-            XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
-             writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
-             writer.WriteStartDocument(true);
-             writer.WriteStartElement("SzenzorAdatok");
+                XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
+                 writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
+                 writer.WriteStartDocument(true);
+                 writer.WriteStartElement("SzenzorAdatok");
             
              
             for (int i = 0; i < szenzorAdatok.Count; i++)
@@ -64,9 +68,10 @@ namespace beolvasas
             writer.Flush();
             writer.Close();
 
-            Console.WriteLine("Adatok generálása, JSON és XML fájlba írása befejeződött.");
 
-            
+            Felvegezve.Invoke("Adatok generálása, JSON és XML fájlba írása befejeződött.");    
+
+
 
             Console.ReadKey();
         }
