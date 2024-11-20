@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SzenzorAdatok>
+  <Szenzor>
+    <Homerseklet>7</Homerseklet>
+    <Paratartalom>30</Paratartalom>
+    <TulfolyoVizszint>67</TulfolyoVizszint>
+    <Allapotjelzo>3</Allapotjelzo>
+    <Folyovizszint>88</Folyovizszint>
+  </Szenzor>
+</SzenzorAdatok>

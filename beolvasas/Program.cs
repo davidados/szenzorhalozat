@@ -1,5 +1,8 @@
-﻿using Randomszamos;
+﻿using System;
+using System.Text;
+using System.Xml;
 using Newtonsoft.Json;
+using Randomszamos;
 
 namespace beolvasas
 {
@@ -28,10 +31,13 @@ namespace beolvasas
                 Allapotjell = randomValues.Allapotjell,
                 Folyovizszint = randomValues.Folyovizszint
             };
-            string json = JsonConvert.SerializeObject(szenzor, Formatting.Indented);
+            string json = JsonConvert.SerializeObject(szenzor, Newtonsoft.Json.Formatting.Indented);
             Console.WriteLine(json);
 
-             XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
+            Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
+
+
+            XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
              writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
              writer.WriteStartDocument(true);
              writer.WriteStartElement("SzenzorAdatok");
@@ -50,7 +56,7 @@ namespace beolvasas
             
              Console.WriteLine("Adatok XML fájlba írása befejeződött.");
 
-            Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
+            
 
             Console.ReadKey();
         }
