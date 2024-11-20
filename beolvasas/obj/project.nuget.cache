@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "k7DK7E59HlI=",
+  "dgSpecHash": "AwtDCvBaZIY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Tomi\\Documents\\Beadando\\szenzorhalozat\\beolvasas\\beolvasas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tomi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.35\\microsoft.windowsdesktop.app.ref.6.0.35.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.35\\microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.35\\microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
