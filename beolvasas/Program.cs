@@ -5,8 +5,12 @@ namespace beolvasas
 {
     internal class Program
     {
+        public delegate void Feladatugyelo(string message);
+        public static event Feladatugyelo Felvegezve;                          //Delegált és event definiálása
         static void Main(string[] args)
         {
+            Felvegezve += OnFelvegezve;                                        //Feliratkozás az OnFelvegezve-re
+
             Ertekek randomValues = Szenzoros.Randomertekes();
 
             Console.WriteLine($"Hőmérséklet: {randomValues.Homerseklet}°C");
@@ -27,8 +31,13 @@ namespace beolvasas
             string json = JsonConvert.SerializeObject(szenzor, Formatting.Indented);
             Console.WriteLine(json);
 
+            Felvegezve.Invoke("A Json konvertálás sikeresen megtörtént!");                //Esemény meghívása
 
             Console.ReadKey();
+        }
+        private static void OnFelvegezve(string message)                                  //Esemény üzenete
+        {
+            Console.WriteLine($"\n{message}");
         }
     }
 }
