@@ -33,3 +33,4 @@ C:\Users\User\Szenzohalozat2\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.dll
 C:\Users\User\Szenzohalozat2\szenzorhalozat\ertekek\obj\Debug\net6.0\refint\ertekek.dll
 C:\Users\User\Szenzohalozat2\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.pdb
 C:\Users\User\Szenzohalozat2\szenzorhalozat\ertekek\obj\Debug\net6.0\ref\ertekek.dll
+C:\Users\User\Szenzohalozat2\szenzorhalozat\ertekek\obj\Debug\net6.0\ertekek.csproj.AssemblyReference.cache

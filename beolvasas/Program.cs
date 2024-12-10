@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml;
 using Newtonsoft.Json;
+using System.Linq;
 using Randomszamos;
 using Microsoft.Data.Sqlite;
 
@@ -116,9 +117,28 @@ namespace beolvasas
             writer.Close();
 
 
-            Felvegezve.Invoke("Adatok generálása, JSON és XML fájlba írása befejeződött.");    
+            Felvegezve.Invoke("Adatok generálása, JSON és XML fájlba írása befejeződött.");
 
 
+            var maxho = szenzorAdatok.MaxBy(x => x.Homerseklet);
+            Console.WriteLine("\nLinq 1.:");
+            Console.WriteLine($"A legmagasabban mért hőmérséklet: {maxho.Homerseklet}°C");           //1.Linq max lekérdezés
+
+            var atlagpara = szenzorAdatok.Average(x => x.Paratartalom);
+            Console.WriteLine("\nLinq 2.:");
+            Console.WriteLine($"Az átlagos páratartalom: {atlagpara}%");                    //2.Linq átlag pártartalom lekérdezés
+
+            var ertekek = from number in szenzorAdatok
+                          orderby number.Homerseklet
+                          where number.Allapotjell == 1
+                          where number.Homerseklet >= 20 && number.Homerseklet <= 30
+                          select number;
+            Console.WriteLine("\nLinq 3.:");                                               //3.Linq több feltételes lekérdezés
+            foreach (var number in ertekek)
+            {
+                Console.WriteLine($"Túlfolyó tartályok vízszintje: {number.TulfolyoVizszint}cm, Hőmérséklet: {number.Homerseklet}°C");
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
         }

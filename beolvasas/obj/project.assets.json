@@ -220,6 +220,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Data.Sqlite": "9.0.0",
           "SQLite": "3.13.0"
         },
         "compile": {

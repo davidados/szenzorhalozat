@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("beolvasas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29463f7e0b3d92c1a77b6ee2487b603014943b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21b7c5360c3a88b74ce4e606e85d34f4f4c42c13")]
 [assembly: System.Reflection.AssemblyProductAttribute("beolvasas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("beolvasas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
