@@ -8,11 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SQLite" Version="3.13.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ertekek\ertekek.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ertekek">
+      <HintPath>..\..\..\szenzorhalozat\Beolvasas\Ertekek.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

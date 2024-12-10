@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RuyNsldiXJecT/SawIVEQh9Wz5k0ATzyxv7tknr0XMIuoVdNg3VTQsvsG7WZThrAXu9JK/tgrwbEJcRgFGjFaw==",
+  "dgSpecHash": "de8FyYEG7NIgkG2ElAEGGFjCbV/g6tgzgsYbkVfEqb2Yqzr7RNIz7FCE3/Q159OTywLe4q17hTNZtda4RVx9Xg==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Szenzohalozat2\\szenzorhalozat\\ertekek\\ertekek.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512"
+  ],
   "logs": []
 }

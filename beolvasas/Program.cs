@@ -3,6 +3,8 @@ using System.Text;
 using System.Xml;
 using Newtonsoft.Json;
 using Randomszamos;
+using Microsoft.Data.Sqlite;
+
 
 namespace beolvasas
 {
@@ -32,19 +34,64 @@ namespace beolvasas
 
 
     
-                  // JSON fájl generálása
-                   string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
-                   Console.WriteLine("JSON adat:");
-                   Console.WriteLine(json);
-                    StreamWriter ki = new StreamWriter("adatok_json.txt"); //JSON fájl létrehozása
-                    ki.WriteLine(json); //kiírjuk a fájlba
-                    ki.Flush(); //puffer ürítése
-                    ki.Close();
-                    Felvegezve.Invoke("\nElkészült az adatok_json.txt fájl.");
-          
+           // JSON fájl generálása
+             string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
+             Console.WriteLine("JSON adat:");
+             Console.WriteLine(json);
+             StreamWriter ki = new StreamWriter("adatok_json.txt"); //JSON fájl létrehozása
+             ki.WriteLine(json); //kiírjuk a fájlba
+             ki.Flush(); //puffer ürítése
+             ki.Close();
+             Felvegezve.Invoke("\nElkészült az adatok_json.txt fájl.");
+
+            // SQLite adatbázisba mentés
+            using (var connection = new SqliteConnection("Data Source=adatbazis.db"))
+            {
+                connection.Open();
+
+                // Tábla létrehozása
+                string createTableQuery = @"
+                CREATE TABLE IF NOT EXISTS szenzorAdatok (
+                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Homerseklet NOT NULL,
+                        Paratartalom NOT NULL,
+                        TulfolyoVizszint NOT NULL,
+                        Allapotjell NOT NULL,
+                        Folyovizszint NOT NULL
+                )";
+
+                
+                using (var command = new SqliteCommand(createTableQuery, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+
+                // Adatok beszúrása
+                string insertQuery = @"
+                INSERT INTO szenzorAdatok (Homerseklet, Paratartalom, TulfolyoVizszint, Allapotjell, Folyovizszint)
+                VALUES (@Homerseklet, @Paratartalom, @TulfolyoVizszint, @Allapotjell, @Folyovizszint)";
+                using (var command = new SqliteCommand(insertQuery, connection))
+                {
+                    foreach (var adat in szenzorAdatok)
+                    {
+                        command.Parameters.Clear();
+                        command.Parameters.AddWithValue("@Homerseklet", adat.Homerseklet);
+                        command.Parameters.AddWithValue("@Paratartalom", adat.Paratartalom);
+                        command.Parameters.AddWithValue("@TulfolyoVizszint", adat.TulfolyoVizszint);
+                        command.Parameters.AddWithValue("@Allapotjell", adat.Allapotjell);
+                        command.Parameters.AddWithValue("@Folyovizszint", adat.Folyovizszint);
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                connection.Close();
+            }
+
+            Felvegezve.Invoke("Adatok sikeresen elmentve az adatbazis.db adatbázisba.");
 
 
-                XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
+
+            XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
                  writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
                  writer.WriteStartDocument(true);
                  writer.WriteStartElement("SzenzorAdatok");
