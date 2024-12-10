@@ -12,10 +12,10 @@ namespace beolvasas
     internal class Program
     {
         public delegate void Feladatugyelo(string message);
-        public static event Feladatugyelo Felvegezve;                          //Delegált és event definiálása
+        public static event Feladatugyelo Felvegezve;                          //Delegált és event definiálása (Tamás)
         static void Main(string[] args)
         {
-            Felvegezve += OnFelvegezve;                                        //Feliratkozás az OnFelvegezve-re
+            Felvegezve += OnFelvegezve;                                        //Feliratkozás az OnFelvegezve-re (Tamás)
 
             List<Ertekek> szenzorAdatok = new List<Ertekek>();
             for (int i = 0; i < 50; i++)
@@ -39,13 +39,13 @@ namespace beolvasas
              string json = JsonConvert.SerializeObject(szenzorAdatok, Newtonsoft.Json.Formatting.Indented);
              Console.WriteLine("JSON adat:");
              Console.WriteLine(json);
-             StreamWriter ki = new StreamWriter("adatok_json.txt"); //JSON fájl létrehozása
+             StreamWriter ki = new StreamWriter("adatok_json.txt"); //JSON fájl létrehozása (Dávid)
              ki.WriteLine(json); //kiírjuk a fájlba
              ki.Flush(); //puffer ürítése
              ki.Close();
              Felvegezve.Invoke("\nElkészült az adatok_json.txt fájl.");
 
-            // SQLite adatbázisba mentés
+            // SQLite adatbázisba mentés (Dávid)
             using (var connection = new SqliteConnection("Data Source=adatbazis.db"))
             {
                 connection.Open();
@@ -92,7 +92,7 @@ namespace beolvasas
 
 
 
-            XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("szenzorok.xml", Encoding.UTF8); // (Dávid)
                  writer.Formatting = System.Xml.Formatting.Indented; // A behúzásos szerkezethez
                  writer.WriteStartDocument(true);
                  writer.WriteStartElement("SzenzorAdatok");
@@ -122,18 +122,18 @@ namespace beolvasas
 
             var maxho = szenzorAdatok.MaxBy(x => x.Homerseklet);
             Console.WriteLine("\nLinq 1.:");
-            Console.WriteLine($"A legmagasabban mért hőmérséklet: {maxho.Homerseklet}°C");           //1.Linq max lekérdezés
+            Console.WriteLine($"A legmagasabban mért hőmérséklet: {maxho.Homerseklet}°C");           //1.Linq max lekérdezés (Tamás)
 
             var atlagpara = szenzorAdatok.Average(x => x.Paratartalom);
             Console.WriteLine("\nLinq 2.:");
-            Console.WriteLine($"Az átlagos páratartalom: {atlagpara}%");                    //2.Linq átlag pártartalom lekérdezés
+            Console.WriteLine($"Az átlagos páratartalom: {atlagpara}%");                    //2.Linq átlag pártartalom lekérdezés (Tamás)
 
             var ertekek = from number in szenzorAdatok
                           orderby number.Homerseklet
                           where number.Allapotjell == 1
                           where number.Homerseklet >= 20 && number.Homerseklet <= 30
                           select number;
-            Console.WriteLine("\nLinq 3.:");                                               //3.Linq több feltételes lekérdezés
+            Console.WriteLine("\nLinq 3.:");                                               //3.Linq több feltételes lekérdezés  (Tamás)
             foreach (var number in ertekek)
             {
                 Console.WriteLine($"Túlfolyó tartályok vízszintje: {number.TulfolyoVizszint}cm, Hőmérséklet: {number.Homerseklet}°C");
@@ -142,7 +142,7 @@ namespace beolvasas
 
             Console.ReadKey();
         }
-        private static void OnFelvegezve(string message)                                  //Esemény üzenete
+        private static void OnFelvegezve(string message)                                  //Esemény üzenete (Tamás)
         {
             Console.WriteLine($"\n{message}");
         }

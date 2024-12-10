@@ -1,6 +1,6 @@
 ﻿namespace Randomszamos
 {
-    public class Ertekek
+    public class Ertekek // (Tamás)
     {
         public int Homerseklet { get; set; }
         public int Paratartalom { get; set; }
